@@ -18,8 +18,8 @@
         <td><?= $user->getNom(); ?></td>
         <td><?= $user->getPrenom(); ?></td>
         <td><?= $user->getService(); ?></td>
-        <td><a class="btn btn-default" href="editer.php?id=<?= $user->getId(); ?>" role="button">Editer</a> </td>
-        <td><a class="btn btn-danger" href="supprimer.php?id=<?= $user->getId(); ?>" role="button">Supprimer</a> </td>
+        <td><a class="btn btn-default" href="editController.php?id=<?= $user->getId(); ?>" role="button">Editer</a> </td>
+        <td><a class="btn btn-danger" href="deleteControler.php?id=<?= $user->getId(); ?>" role="button">Supprimer</a> </td>
 
         </tr>
         <?php } ?>
