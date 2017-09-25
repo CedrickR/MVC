@@ -2,6 +2,10 @@
 
 include "model/model.php";
 
-$utilisateur = getUser($_GET['id']);
+/*
+$results = getUser($_GET['id']);
 
-var_dump($utilisateur);
+foreach ($results as $line) {
+    
+}
+include "vues/editer.php";

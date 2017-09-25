@@ -1,6 +1,6 @@
 <?php
     
-    require "model/Utilisateur.php";
+
     function connectionDB(){
     
         try{
@@ -23,7 +23,7 @@
         $stmt = $db->query($query);
         $results = $stmt->fetchAll();
 
-        return setArrayUtilisateur($results);
+        return $results;
         
 
     }
@@ -35,23 +35,11 @@
                 $stmt = $db->query($query);
                 $results = $stmt->fetchAll();
         
-                return setArrayUtilisateur($results);
+                return $results;
                 
         
             }
 
 
-    function setArrayUtilisateur($results){
-        foreach ($results as $line) {
-            $currentId = $line['ID'];
-            $currentNom = $line['nom'];
-            $currentPrenom = $line['prenom'];
-            $currentService = $line['service'];
-            $utilisateur = new Utilisateur($currentId, $currentNom, $currentPrenom, $currentService );
-            $utilisateurs[]= $utilisateur;
-        }
-    
-        return $utilisateurs;
-    }
     //getAllUser()
     //getUser($id)
